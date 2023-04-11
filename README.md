@@ -70,7 +70,7 @@ or
 |**r**|The  argument received is expected to be a pointer type char * to an array of characters.  Characters from this array are printed in reverse order up to (but not including) a null byte  ('\0').  |
 |**R**|The argument received is expected to be a pointer type char * to an array of characters.  Characters from this array  are  encoded  to  ROT13  and printed in order up to (but not including a null byte  ('\0').  |
 
-## Installation and Usage
+## Installation and Testing
 
 Simply clone the repository by copying the code below to clone the repository on your local machine (Linux distro)
 ```
@@ -78,6 +78,8 @@ git clone https://github.com/tpauldike/printf.git
 ```
 
 After cloning, navigate into the directory **printf** and write a `main.c` file to test `_printf()`, and then compile, probably with the command `gcc *.c -o _printf` and run the file (`./_printf`)
+
+Alternatively,the sub directory [test_files](./test_files) contains a main file and an executable named *main* that will be available on your local machine after cloning the repository, you may take a look at the source code and run the executable to see the output. You may as well modify the content of the `main.c`, copy it to the root directory and recompile
 
 ```Submitted by:```
 [**Ebubechi Anyanwu**](https://github.com/ebu-be) and [**Topman Paul-Dike**](https://github.com/tpauldike)
