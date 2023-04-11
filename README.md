@@ -1,14 +1,14 @@
-# `printf()` (Team Project)
-As part of the requirement for the ALX software engineering course requirement, we were to emulate the `C` Standard Library Function `printf()`, making our own function `_printf()` to work like it.
+# `_printf()`
+As part of the requirement for the ALX software engineering course, we were to emulate the `C` Standard Library Function `printf()`, making our own function `_printf()` to work like it. It was the first **team project** that we did while in the ALX SE program.
 
 ## **Synopsis**
-`int _printf(const char *format, ...);` is the protype of the function, and this implies that the function takes on madatory argument that can not be altered, since it's a const, and optional arguments or varying number. The content of the string `format` determines what happens to the other argument(s), if any.
+`int _printf(const char *format, ...);` is the protype of the function, and this implies that the function takes one madatory argument that can not be altered, since it's a const, and some optional varying number of arguments. The content of the string `format` determines what happens to the other argument(s), if any.
 
-`_printf()` was written to use a local buffer of 1024 bytes when printing although it can print larger sets of data. Its return value ( after a successful execution) is the total number of characters printed to stdout, or -1, if an output error is encountered.
+`_printf()` was written to use a local buffer of 1024 bytes when printing although it can print larger sets of data. Its return value ( after a successful execution) is the total number of characters printed to stdout, or -1 if an output error is encountered.
 
-`_printf()` is supposed to print every character (within the double quotes) in the string to stdout, except special characters, such as format specifiers that is preceded by '%', which initiates some conversion that will involve some optional argument.
+`_printf()` is supposed to print every character that is within the double quotes (in the string) to stdout, except special characters, such as format specifiers that is preceded by '%', which initiates some conversion that will involve some optional argument(s).
 
-A **conversion specifier** usually follows the '%', which determines the exact conversion to be made. Between '%' and the *conversion specifier' there may be (in this order):
+A **conversion specifier** usually follows the '%', which determines the exact conversion to be made. Between the percentage symbol (%) and the *conversion specifier*, there may be (in the following order):
 
 > Zero or more **flags**
 >
@@ -22,7 +22,7 @@ A **conversion specifier** usually follows the '%', which determines the exact c
 
 |**Flag**| Description  |
 |--|--|
-|**#**| For **o** conversions the first character of the output string is made zero (by prefixing a 0 if it was not zero already).  For **x** and **X** conversions, a nonzero result has the string "**0x**" or "**0X**" respectively added. |
+|**#**| For **o** conversions the first character of the output string is made zero (by prefixing a 0 if it was not zero already).  For **x** and **X** conversions, a non zero result has the string "**0x**" or "**0X**" respectively added. |
 |**0**| (Not implemented yet) The  value should be zero padded. For **d**, **i**, **o**, **u**, **x**, and **X** the converted value is padded on the left with zeros. If the 0 and **-** flags both appear,the **0** flag is ignored. If a precision is given with a numeric conversion, the **0** flag is ignored.|
 |**-**|(Minus sign, not implemented yet) The converted value is to be left adjusted on the field boundary, (Default is right justification) and  padded  with  blanks  in  the right rather than on the left with blanks or zeros. This flag overrides **0** if both are given.|
 |' '| (Blank Space) The argument is padded with a single blank space before a positive number or empty string produced by a signed conversion.|
