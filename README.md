@@ -1,22 +1,14 @@
-# ALX Software Enginering Printf Team Project
-This team project is a custom made printf function for the C programming language called \_printf. It has been optimized to take various inputs and optional arguments based exactly on how the standard library function printf works. We submitted this as part of the ALX software engineering course requirement for grading.
+# `printf()` (Team Project)
+As part of the requirement for the ALX software engineering course requirement, we were to emulate the `C` Standard Library Function `printf()`, making our own function `_printf()` to work like it.
 
 ## **Synopsis**
-This function **\_printf()** writes output to stdout, the standard output stream with the format and options without making use of any of the standard library files. It was written to use a local buffer of 1024 bytes when printing although it can print larger sets of data.
+`int _printf(const char *format, ...);` is the protype of the function, and this implies that the function takes on madatory argument that can not be altered, since it's a const, and optional arguments or varying number. The content of the string `format` determines what happens to the other argument(s), if any.
 
-The \_printf() function returns the total number of characters printed to the stdout(excluding the null byte at the end of strings) after a successful execution.
+`_printf()` was written to use a local buffer of 1024 bytes when printing although it can print larger sets of data. Its return value ( after a successful execution) is the total number of characters printed to stdout, or -1, if an output error is encountered.
 
-If an output error is encountered, a negative value of -1 is returned.
+`_printf()` is supposed to print every character (within the double quotes) in the string to stdout, except special characters, such as format specifiers that is preceded by '%', which initiates some conversion that will involve some optional argument.
 
-The prototype of this function is:  **int _printf(const char *format, ...);***
-
-This means that it has one mandatory format argument, and an extra number of arguments that can be none, or many.
-
-**Format of the format string**
-
-The format string is a character string starting and ending with double quotes. The format string is composed of zero or more directives; ordinary characters (not %), and conversion specifications, each of which results in fetching zero or more subsequent arguments. 
-
-Each conversion specification is introduced by the character **%** and ends with a **conversion specifier**. In between there may be (in this order):
+A **conversion specifier** usually follows the '%', which determines the exact conversion to be made. Between '%' and the *conversion specifier' there may be (in this order):
 
 > Zero or more **flags**
 >
@@ -78,17 +70,14 @@ or
 |**r**|The  argument received is expected to be a pointer type char * to an array of characters.  Characters from this array are printed in reverse order up to (but not including) a null byte  ('\0').  |
 |**R**|The argument received is expected to be a pointer type char * to an array of characters.  Characters from this array  are  encoded  to  ROT13  and printed in order up to (but not including a null byte  ('\0').  |
 
-# Getting Started
+## Installation and Usage
 
-These instructions will get you a copy of the project up and running on your local machine (Linux distro) for development and testing purposes.
+Simply clone the repository by copying the code below to clone the repository on your local machine (Linux distro)
+```
+git clone https://github.com/tpauldike/printf.git
+```
 
-## Installation
-
-You will need to clone the repository of the project from Github. This will contain the _printf function and all of its dependencies. No main.c file will be provided for testing, so you will need to create one.
-
-    git clone https://github.com/tpauldike/printf.git
-
-After cloning the repository you will have a folder called printf. In here there will be several files that allow the function to work.
+After cloning, navigate into the directory **printf** and write a `main.c` file to test `_printf()`, and then compile, probably with the command `gcc *.c -o _printf` and run the file (`./_printf`)
 
 ```Submitted by:```
 [**Ebubechi Anyanwu**](https://github.com/ebu-be) and [**Topman Paul-Dike**](https://github.com/tpauldike)
